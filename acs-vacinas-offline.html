@@ -62,7 +62,7 @@
      </div>
     </div>
     <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
-     <button onclick="navigate('dashboard')" class="nav-item active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="dashboard"> <i data-lucide="layout-dashboard" class="w-4 h-4 shrink-0"></i><span class="nav-text">Dashboard</span> </button> <button onclick="navigate('patients')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="patients"> <i data-lucide="users" class="w-4 h-4 shrink-0"></i><span class="nav-text">Pacientes</span> </button> <button onclick="navigate('apply-vaccine')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="apply-vaccine"> <i data-lucide="syringe" class="w-4 h-4 shrink-0"></i><span class="nav-text">Aplicar Vacina</span> </button> <button onclick="navigate('visits')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="visits"> <i data-lucide="home" class="w-4 h-4 shrink-0"></i><span class="nav-text">Visitas</span> </button> <button onclick="navigate('vaccines')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="vaccines"> <i data-lucide="pill" class="w-4 h-4 shrink-0"></i><span class="nav-text">Cadastrar Vacina</span> </button> <button onclick="navigate('alerts')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="alerts"> <i data-lucide="bell" class="w-4 h-4 shrink-0"></i><span class="nav-text">Alertas</span> </button> <button onclick="navigate('reports')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="reports"> <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i><span class="nav-text">Relatórios</span> </button>
+     <button onclick="navigate('dashboard')" class="nav-item active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="dashboard"> <i data-lucide="layout-dashboard" class="w-4 h-4 shrink-0"></i><span class="nav-text">Dashboard</span> </button> <button onclick="navigate('patients')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="patients"> <i data-lucide="users" class="w-4 h-4 shrink-0"></i><span class="nav-text">Pacientes</span> </button> <button onclick="navigate('apply-vaccine')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="apply-vaccine"> <i data-lucide="syringe" class="w-4 h-4 shrink-0"></i><span class="nav-text">Aplicar Vacina</span> </button> <button onclick="navigate('vaccines')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="vaccines"> <i data-lucide="pill" class="w-4 h-4 shrink-0"></i><span class="nav-text">Cadastrar Vacina</span> </button> <button onclick="navigate('alerts')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="alerts"> <i data-lucide="bell" class="w-4 h-4 shrink-0"></i><span class="nav-text">Alertas</span> </button> <button onclick="navigate('reports')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm" data-nav="reports"> <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i><span class="nav-text">Relatórios</span> </button>
     </nav>
     <div class="p-3 border-t border-emerald-600/50">
      <div class="flex items-center gap-2 px-3 py-2">
@@ -474,7 +474,7 @@
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
       const navEl = document.querySelector(`[data-nav="${page}"]`);
       if (navEl) navEl.classList.add('active');
-      const titles = { dashboard: 'Dashboard', patients: 'Pacientes', 'apply-vaccine': 'Aplicar Vacina', visits: 'Visitas', vaccines: 'Cadastrar Vacina', alerts: 'Alertas', reports: 'Relatórios' };
+      const titles = { dashboard: 'Dashboard', patients: 'Pacientes', 'apply-vaccine': 'Aplicar Vacina', vaccines: 'Cadastrar Vacina', alerts: 'Alertas', reports: 'Relatórios' };
       document.getElementById('page-title').textContent = titles[page] || '';
       renderCurrentPage();
     }
@@ -485,8 +485,7 @@
       const renderers = { 
         dashboard: renderDashboard, 
         patients: renderPatients, 
-        'apply-vaccine': renderApplyVaccine, 
-        visits: renderVisits,
+        'apply-vaccine': renderApplyVaccine,
         vaccines: renderVaccines, 
         alerts: renderAlerts, 
         reports: renderReports 
