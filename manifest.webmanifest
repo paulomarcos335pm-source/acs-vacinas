@@ -1,16 +1,14 @@
 {
-  "name": "ACS Vacinas & Busca Ativa",
+  "name": "ACS Vacinas",
   "short_name": "ACS Vacinas",
-  "description": "App offline para agente de saúde registrar pacientes, vacinas, visitas e fotos.",
-  "start_url": "./acs-vacinas-offline.html",
-  "scope": "./",
+  "description": "Sistema de imunização para Agentes Comunitários de Saúde",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#f9fafb",
   "theme_color": "#047857",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "./icon.svg",
+      "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
